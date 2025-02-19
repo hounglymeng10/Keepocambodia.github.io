@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keepo Cambodia - Premium Tissue Products</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #6ca6cd;
+            --secondary-color: #6ca6cd;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-color: var(--light-bg);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-bg);
+            padding: 4rem 2rem;
+        }
+
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+        /* Add new styles */
+        .product-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .price {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .khmer-text {
+            font-family: 'Khmer OS', Arial, sans-serif;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        .product-features {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+                .product-image img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover; /* Optional: Maintain aspect ratio and cover the container */
+        }
+/* Image styling within slides (set fixed 200x200 size) */
+.slide img {
+  width: 200px;      /* Set fixed width to 200 pixels */
+  height: 200px;     /* Set fixed height to 200 pixels */
+  object-fit: cover; /* Maintain aspect ratio and cover the 200x200 area (crops image if needed) */
+  vertical-align: middle; /* Vertically align images within slides */
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Keepo Cambodia</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="slideshow-container">
+    
+            <div class="slide fade">
+                <img src="April05.png" alt="Keepo Tissue Slide 1">
+            </div>
+    
+            <div class="slide fade">
+                <img src="April19.png" alt="Keepo Tissue Slide 2">
+            </div>
+    
+            <div class="slide fade">
+                <img src="April28.png" alt="Keepo Tissue Slide 3">
+            </div>
+            <div class="slide fade">
+                <img src="mar14.png" alt="Keepo Tissue Slide 3">
+            </div>
+            <div class="slide fade">
+                <img src="mar26.png" alt="Keepo Tissue Slide 3">
+            </div>
+            <div class="slide fade">
+                <img src="mar31.png" alt="Keepo Tissue Slide 3">
+            </div>
+    
+        </div>
+        <h1>Premium Quality Tissue Products</h1>
+        <p>Soft, Strong, and Safe for Everyone</p>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <a href="https://t.me/keepokh" target="_blank" class="product-card fade-in">
+                <div class="product-image">
+                    <img src="April28.png" alt="KEEPO FACIAL TISSUE 540SHEET 3PLY 2BOX">
+                </div>
+                <h3>KEEPO FACIAL TISSUE 540SHEET3PLY2</h3>
+                <p class="price">KHR 10,300.00</p>
+                <p class="khmer-text">ក្រដាសជូតមាត់ Keepo មាន ៥៤០សន្លឹក ៣ស្រទាប់ កញ្ចប់ធំមាន២</p>
+                <div class="product-features">
+                    <p>540 Sheets • 3 Ply • 2 Boxes</p>
+                    <p>100% Natural Wood Pulp • Hypoallergenic</p>
+                </div>
+            </a>
+
+            <!-- Product 2 -->
+            <a href="https://t.me/keepokh" target="_blank" class="product-card fade-in">
+                <div class="product-image">
+                    <img src="April05.png" alt="Pop-up Mini Tissue">
+                </div>
+                <h3>KEEPO POP-UP MINI</h3>
+                <p class="price">KHR 4,500.00</p>
+                <p class="khmer-text">ក្រដាសជូតមាត់ Keepo ប៉ុបអាប់ តូច ៩០សន្លឹក មាន៦ប្រអប់</p>
+                <div class="product-features">
+                    <p>90 Sheets • 6 Boxes • Portable Design</p>
+                    <p>Pop-up Mechanism • Travel Friendly</p>
+                </div>
+            </a>
+
+            <!-- Product 3 -->
+            <a href="https://t.me/keepokh" target="_blank" class="product-card fade-in">
+                <div class="product-image">
+                    <img src="April19.png" alt="Hang Facial Tissue">
+                </div>
+                <h3>KEEPO HANG FACIAL</h3>
+                <p class="price">KHR 4,500.00</p>
+                <p class="khmer-text">ក្រដាសជូតមាត់ Keepo មាន ១០០០សន្លឹក និង ២ស្រទាប់</p>
+                <div class="product-features">
+                    <p>1000 Sheets • 2 Ply • Hanging Design</p>
+                    <p>Space-saving • Multi-purpose Use</p>
+                </div>
+            </a>
+
+            <!-- Product 4 -->
+            <a href="https://t.me/keepokh" target="_blank" class="product-card fade-in">
+                <div class="product-image">
+                    <img src="mar14.png" alt="Facial Tissue">                </div>
+                <h3>KEEPO FACIAL TISSUE 480SHEET3PLY3</h3>
+                <p class="price">KHR 10,300.00</p>
+                <p class="khmer-text">ក្រដាសជូតមាត់ Keepo ៤៨០សន្លឹក ៣ស្រទាប់ មាន៣ប្រអប់</p>
+                <div class="product-features">
+                    <p>480 Sheets • 3 Ply • 3 Boxes</p>
+                    <p>Premium Softness • Bulk Packaging</p>
+                </div>
+            </a>
+        </div>
+    </section>  
+
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Connect With Us</h2>
+            <p>Phone: 096 696 0606</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/keepokh/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/keepokh" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@keepocambodia" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://t.me/keepocambodia" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Keepo Cambodia. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>    
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple animation for product cards on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("slide");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; // Hide all slides
+          }
+          slideIndex++; // Increment slide index
+          if (slideIndex > slides.length) {slideIndex = 1} // Reset index to 1 if at the end
+          slides[slideIndex-1].style.display = "block"; // Display current slide
+          setTimeout(showSlides, 3000); // Change image every 3 seconds (3000 milliseconds)
+        }
+        </script>
+</body>
+</html>
