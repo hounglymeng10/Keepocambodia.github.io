@@ -7,7 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     <style>
         :root {
-            --primary-color: #6ca6cd;
+            --primary-color: #30769e;
             --secondary-color: #6ca6cd;
             --text-color: #333;
             --light-bg: #f5f5f5;
@@ -205,61 +205,38 @@
         vertical-align: middle; /* Vertically align images within slides */
         }
         /* Events Slideshow */
-.events-slideshow {
-    padding: 2rem;
-    text-align: center;
-    background-color: var(--light-bg);
-}
 
-.slideshow-container-events {
-    position: relative;
-    max-width: 200px;
-    margin: 0 auto;
-}
+                /* Product Promo Slideshow */
+        .slideshow-container-products {
+            position: relative;
+            max-width: 1200px;
+            margin: 2rem auto;
+            overflow: hidden;
+        }
 
-.slide-events {
-    display: none;
-}
+        .slide-products {
+            display: none;
+            width: 100%;
+        }
 
-.slide-events img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
+        .slide-products img {
+            width: 100%;
+            height: auto;
+            max-width: 1200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
 
-/* Products Slideshow */
-.slideshow-container-products {
-    position: relative;
-    max-width: 200px;
-    margin: 0 auto 2rem;
-}
+        /* Ensure responsiveness */
+        @media (max-width: 768px) {
+            .slideshow-container-products {
+                max-width: 100%;
+            }
 
-.slide-products {
-    display: none;
-}
-
-.slide-products img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-/* Contact Slideshow */
-.slideshow-container-contact {
-    position: relative;
-    max-width: 200px;
-    margin: 1rem auto;
-}
-
-.slide-contact {
-    display: none;
-}
-
-.slide-contact img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
+            .slide-products img {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -275,45 +252,10 @@
     </nav>
 
     <section class="hero" id="home">
-        <div class="slideshow-container">
-            <div class="slide fade">
-                <img src="April05.png" alt="Keepo Tissue Slide 1">
-            </div>
-            <div class="slide fade">
-                <img src="April19.png" alt="Keepo Tissue Slide 2">
-            </div>
-            <div class="slide fade">
-                <img src="April28.png" alt="Keepo Tissue Slide 3">
-            </div>
-            <div class="slide fade">
-                <img src="mar14.png" alt="Keepo Tissue Slide 4">
-            </div>
-            <div class="slide fade">
-                <img src="mar26.png" alt="Keepo Tissue Slide 5">
-            </div>
-            <div class="slide fade">
-                <img src="mar31.png" alt="Keepo Tissue Slide 6">
-            </div>
-        </div>
+
         <h1>Premium Quality Tissue Products</h1>
         <p>Soft, Strong, and Safe for Everyone</p>
     </section>
-
-    <section class="events-slideshow">
-        <div class="slideshow-container-events">
-            <div class="slide-events fade">
-                <img src="April05.png" alt="Maternal Health Day Slide">
-            </div>
-            <div class="slide-events fade">
-                <img src="mar12.png" alt="Roadshow Slide">
-            </div>
-            <div class="slide-events fade">
-                <img src="mar13.png" alt="Meak Bochea Slide">
-            </div>
-        </div>
-    </section>
-
-    
     
     <section class="products" id="products">
         <h2>Our Products</h2>
@@ -374,6 +316,21 @@
             </a>
         </div>
     </section>  
+
+
+    <!-- New Product Promo Slideshow -->
+    <div class="slideshow-container-products">
+        <div class="slide-products fade">
+            <img src="2.png" alt="Keepo Promo Slide 1">
+        </div>
+        <div class="slide-products fade">
+            <img src="3.png" alt="Keepo Promo Slide 2">
+        </div>
+        <div class="slide-products fade">
+            <img src="4.png" alt="Keepo Promo Slide 3">
+        </div>
+    </div>
+</section>
 
     <section class="contact" id="contact">
         <div class="contact-content">
@@ -440,54 +397,23 @@
           setTimeout(showSlides, 3000); // Change image every 3 seconds (3000 milliseconds)
         }
         </script>
-        <script>
-            // Events Slideshow
-            let eventsSlideIndex = 0;
-            showEventsSlides();
-            
-            function showEventsSlides() {
-                let i;
-                let slides = document.getElementsByClassName("slide-events");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                eventsSlideIndex++;
-                if (eventsSlideIndex > slides.length) { eventsSlideIndex = 1 }
-                slides[eventsSlideIndex-1].style.display = "block";
-                setTimeout(showEventsSlides, 3000);
-            }
-            
-            // Products Slideshow
-            let productsSlideIndex = 0;
-            showProductsSlides();
-            
-            function showProductsSlides() {
-                let i;
-                let slides = document.getElementsByClassName("slide-products");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                productsSlideIndex++;
-                if (productsSlideIndex > slides.length) { productsSlideIndex = 1 }
-                slides[productsSlideIndex-1].style.display = "block";
-                setTimeout(showProductsSlides, 3000);
-            }
-            
-            // Contact Slideshow
-            let contactSlideIndex = 0;
-            showContactSlides();
-            
-            function showContactSlides() {
-                let i;
-                let slides = document.getElementsByClassName("slide-contact");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                contactSlideIndex++;
-                if (contactSlideIndex > slides.length) { contactSlideIndex = 1 }
-                slides[contactSlideIndex-1].style.display = "block";
-                setTimeout(showContactSlides, 3000);
-            }
-            </script>
+
+<script>
+    // Product Promo Slideshow
+    let productsSlideIndex = 0;
+    showProductsSlides();
+    
+    function showProductsSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slide-products");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        productsSlideIndex++;
+        if (productsSlideIndex > slides.length) { productsSlideIndex = 1 }
+        slides[productsSlideIndex-1].style.display = "block";
+        setTimeout(showProductsSlides, 3000); // Change image every 3 seconds
+    }
+    </script>
 </body>
 </html>
